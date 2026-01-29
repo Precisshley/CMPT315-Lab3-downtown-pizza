@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downtown Pizza</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1>Downtown Pizza - Order</h1>
+  <main>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Customer Information</legend>
+                <label for="name"> Name</label>
+                <input type="text" id="name"> 
+
+                <label for="address"> Address</label>
+                <input type="text" id="address">
+
+                <label for="phone"> Phone</label>
+                <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+        </fieldset>
+
+        <fieldset>
+            <legend>Order</legend>
+                <label>Crust:</label>
+                <div class="flex-row-radio">
+                    <label><input type="radio" name="crust" required> Thin Crust</label>
+                    <label><input type="radio" name="crust" required> Classic Crust</label>
+                    <label><input type="radio" name="crust" required> Deep Dish Crust</label>
+                </div>
+                <label>Toppings:</label>
+                <div class="flex-row-checkbox">
+                    <label><input type="checkbox" name="toppings"> Pepperoni</label>
+                    <label><input type="checkbox" name="toppings"> Mushroom</label>
+                    <label><input type="checkbox" name="toppings"> Olives</label>
+                    <label><input type="checkbox" name="toppings"> Green Peppers</label>
+                </div>
+                <label for="quantity">Quantity (1-10):</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10">
+        </fieldset>
+
+        <fieldset>
+            <legend>Delivery and Payment</legend>
+                <label for="delivery-instructions">Delivery Instructions:</label>
+                <textarea id="delivery-instructions" rows="3"></textarea>
+
+                <label for="delivery-date">Preferred Delivery Date and Time:</label>
+                <input type="datetime-local" id="delivery-date" min="">
+
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method">
+                <option value="cash">Cash</option>
+                <option value="card">Card</option>
+                <option value="debit">Debit</option>
+                </select>
+
+                <div class="flex-row-buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+        </fieldset>
+    </form>
+
+
+    <!-- Order information -->
+    <aside>
+        <table>
+            <caption>Order Summary</caption>
+            <thead>
+                <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Base Pizza</td>
+                <td>Large (12"), Thin crust </td>
+                <td>$16.99</td>
+                </tr>
+                <tr>
+                <td>Toppings</td>
+                <td>Mushrooms, Olives, Extra cheese </td>
+                <td>$4.50</td>
+                </tr>
+                <tr>
+                <td>Delivery Fee</td>
+                <td>Standard Delivery</td>
+                <td>$3.00</td>
+                </tr>
+                <tr>
+                <th colspan="2">Total</th>
+                <th>$25.48</th>
+                </tr>
+            </tbody>
+        </table>
+    </aside>
+  </main>
+</body>
+</html>

@@ -1,0 +1,69 @@
+body { font-family: sans-serif; background: #eee; padding: 20px; }
+fieldset { 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 15px;
+    align-items: start;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+
+label { 
+    text-align: right; 
+    align-items: center;
+    font-weight: bold;
+}
+
+.flex-row-radios {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.flex-row-checkbox {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+  flex-wrap: wrap;
+}
+
+.flex-row-button {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background: #c0eaff;
+}
+
+/* Validation feedback */
+input:invalid { border: 2px solid red; }
+input:valid { border: 2px solid green; }
+
+/* Responsive breakpoint */
+@media (max-width: 600px) {
+  main { grid-template-columns: 1fr; }
+  label { text-align: left; }
+}
